@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SparePartsManagement</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="tab_title_IN">入庫</string>
+    <string name="tab_title_OUT">出庫</string>
+    <string name="tab_title_DBedit">DB編集</string>
+    <string name="tab_title_Test">接続テスト</string>
+
+    <string name="No_connection">接続されていません。</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+</resources>

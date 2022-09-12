@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/swipeRefreshLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/favoriteImageView"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_connect"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            app:tint="@android:color/holo_blue_light"/>
+
+        <TextView
+            android:id="@+id/textViewException"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/favoriteImageView"/>
+
+
+
+
+    <TextView
+        android:id="@+id/textViewItemInputNum"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+
+        android:text="入庫No."
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/favoriteImageView"/>
+
+    <EditText
+        android:id="@+id/editTextItemInputNumber"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/textViewItemInputNum"
+        android:layout_below="@+id/favoriteImageView"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="number"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewAuthName"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="登録者"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemInputNum"
+        />
+
+    <EditText
+        android:id="@+id/editTextAuthName"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewAuthName"
+        android:layout_below="@id/editTextItemInputNumber"
+        />
+
+    <TextView
+        android:id="@+id/textViewPlace"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="保管場所"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewAuthName"
+        />
+
+    <EditText
+        android:id="@+id/editTextPlace"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewPlace"
+        android:layout_below="@id/editTextAuthName"
+        />
+
+
+    <TextView
+        android:id="@+id/textViewItemCode"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="部品\nコード"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewPlace"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextItemCode"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemCode"
+        android:layout_below="@id/editTextPlace"/>
+
+    <TextView
+        android:id="@+id/textViewItemName"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="部品名"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemCode"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemName"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemName"
+        android:layout_below="@id/editTextItemCode"/>
+
+    <TextView
+        android:id="@+id/textViewItemSpec"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="型式"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemName"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemSpec"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemSpec"
+        android:layout_below="@id/editTextItemName"/>
+
+    <TextView
+        android:id="@+id/textViewItemMaker"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="メーカー"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemSpec"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemMaker"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemName"
+        android:layout_below="@id/editTextItemSpec"/>
+
+    <TextView
+        android:id="@+id/textViewItemUnitName"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="単位"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemMaker"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemUnitName"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemMaker"
+        android:layout_below="@id/editTextItemMaker"/>
+
+    <TextView
+        android:id="@+id/textViewItemPriceNew"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="新品価格"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemUnitName"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemPriceNew"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemUnitName"
+        android:layout_below="@id/editTextItemUnitName"/>
+
+    <TextView
+        android:id="@+id/textViewItemPriceSec"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="中古価格"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemPriceNew"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemPriceSec"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemPriceNew"
+        android:layout_below="@id/editTextItemPriceNew"/>
+
+    <TextView
+        android:id="@+id/textViewItemQtyNew"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="新品個数"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemPriceSec"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemQtyNew"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemPriceSec"
+        android:layout_below="@id/editTextItemPriceSec"/>
+
+    <TextView
+        android:id="@+id/textViewItemQtySec"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="中古個数"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemQtyNew"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemQtySec"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemQtyNew"
+        android:layout_below="@id/editTextItemQtyNew"/>
+
+    <TextView
+        android:id="@+id/textViewItemPurchaseNum"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="注文番号"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemQtySec"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemPurchaseNum"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemQtySec"
+        android:layout_below="@id/editTextItemQtySec"/>
+
+    <TextView
+        android:id="@+id/textViewItemSaler"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="納入業者"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemPurchaseNum"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemSaler"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemPurchaseNum"
+        android:layout_below="@id/editTextItemPurchaseNum"/>
+
+    <TextView
+        android:id="@+id/textViewItemNote"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="備考"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:layout_below="@+id/textViewItemSaler"
+        />
+
+    <EditText
+        android:id="@+id/editTextItemNote"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="text"
+        android:text=""
+        android:layout_toRightOf="@+id/textViewItemSaler"
+        android:layout_below="@id/editTextItemSaler"/>
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fabAdddataSend"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/textViewItemNote"-->
+<!--            android:layout_margin="16dp"-->
+<!--            app:srcCompat="@drawable/ic_add_data" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDeleteSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewItemNote"
+            android:layout_toRightOf="@+id/fabUpdate"
+            android:layout_marginStart="16dp"
+            android:layout_margin="16dp"
+            app:tint="@android:color/holo_red_light"
+            app:srcCompat="@drawable/ic_deletesend" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewItemNote"
+            android:layout_marginStart="16dp"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_updatesend" />
+<!--            android:layout_toRightOf="@+id/fabAdddataSend"-->
+
+
+    </RelativeLayout>
+
+
+
+    <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+</ScrollView>

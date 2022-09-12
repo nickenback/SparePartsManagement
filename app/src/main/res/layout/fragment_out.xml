@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/swipeRefreshLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+
+    <Button
+        android:id="@+id/ButtonItemSerch"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="検索"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp" />
+
+    <EditText
+        android:id="@+id/editTextItemSeach"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:background="@drawable/simple_black_flame"
+        android:inputType="number"
+        android:text="未実装　今後アップデートで対応します。"
+        android:layout_toRightOf="@+id/ButtonItemSerch"
+        android:layout_marginLeft="0dp" />
+
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+</RelativeLayout>
