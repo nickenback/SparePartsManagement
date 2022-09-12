@@ -450,8 +450,7 @@ class DBeditFragment: Fragment(), View.OnClickListener {
             }
         }
 
-
-
+        
     }
 
 
